@@ -1,0 +1,65 @@
+@import '_mixin.scss';
+@import 'common.scss';
+.wrap {
+    width: 100%;
+    height: 100%;
+    background: url(../img/1_02.jpg) no-repeat;
+    background-size: 150%;
+    @include box_flex;
+    @include direction(column);
+    header {
+        width: 100%;
+        height: pxTorem(225px);
+        @include box_flex;
+        @include align;
+        @include justify;
+        img {
+            width: pxTorem(70px);
+            height: pxTorem(70px);
+        }
+    }
+    section {
+        width: 100%;
+        @include flex;
+        @include box_flex;
+        @include direction(column);
+        @include align;
+        p {
+            width: pxTorem(250px);
+            height: pxTorem(33px);
+            text-align: center;
+            line-height: pxTorem(33px);
+            border: 1px solid #d2332a;
+            border-radius: pxTorem(20px);
+            font-size: pxTorem(16px);
+            color: #d2332a;
+            margin-top: pxTorem(15px);
+        }
+        b {
+            font-size: pxTorem(16px);
+            color: #ccc;
+            border-bottom: 1px solid #ccc;
+            margin-top: pxTorem(15px);
+        }
+    }
+    footer {
+        width: 100%;
+        height: pxTorem(44px);
+        @include box_flex;
+        @include align;
+        @include justify(space-around);
+        dl {
+            @include box_flex;
+            @include direction(column);
+            @include align;
+            dt {
+                width: pxTorem(15px);
+                height: pxTorem(15px);
+                background: orange;
+            }
+            dd {
+                font-size: pxTorem(16px);
+            }
+        }
+    }
+}
